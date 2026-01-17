@@ -1,0 +1,79 @@
+########################################
+# 1️⃣ Get all candidates (should be empty first)
+GET http://localhost:5000/api/candidates
+Content-Type: application/json
+
+###
+
+########################################
+# 2️⃣ Add Candidate: Alice
+POST http://localhost:5000/api/candidates
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "party": "Blue"
+}
+
+###
+
+########################################
+# 3️⃣ Add Candidate: Bob
+POST http://localhost:5000/api/candidates
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "party": "Red"
+}
+
+###
+
+########################################
+# 4️⃣ Add Candidate: Charlie
+POST http://localhost:5000/api/candidates
+Content-Type: application/json
+
+{
+  "name": "Charlie",
+  "party": "Green"
+}
+
+###
+
+########################################
+# 5️⃣ Get all candidates (should show 3 candidates now)
+GET http://localhost:5000/api/candidates
+Content-Type: application/json
+
+###
+
+########################################
+# 6️⃣ Vote for Alice
+# Replace <ALICE_ID> with the actual _id from the previous GET
+POST http://localhost:5000/api/vote
+Content-Type: application/json
+
+{
+  "voterId": "voter123",
+  "candidateId": "<ALICE_ID>"
+}
+
+###
+
+########################################
+# 7️⃣ Try voting again with same voter (should fail)
+POST http://localhost:5000/api/vote
+Content-Type: application/json
+
+{
+  "voterId": "voter123",
+  "candidateId": "<ALICE_ID>"
+}
+
+###
+
+########################################
+# 8️⃣ Get results (check votes)
+GET http://localhost:5000/api/results
+Content-Type: application/json
