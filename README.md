@@ -1,4 +1,4 @@
-# Voting Project
+# AmarVote
 
 A backend API system built with Node.js and Express to manage candidates and votes in a voting application. This project provides RESTful endpoints for adding candidates and retrieving voting data stored in MongoDB.
 
