@@ -1,12 +1,12 @@
 ########################################
-# 1️⃣ Get all candidates (should be empty first)
+#  Get all candidates (should be empty first)
 GET http://localhost:5000/api/candidates
 Content-Type: application/json
 
 ###
 
 ########################################
-# 2️⃣ Add Candidate: Alice
+#  Add Candidate: Alice
 POST http://localhost:5000/api/candidates
 Content-Type: application/json
 
@@ -18,7 +18,7 @@ Content-Type: application/json
 ###
 
 ########################################
-# 3️⃣ Add Candidate: Bob
+#  Add Candidate: Bob
 POST http://localhost:5000/api/candidates
 Content-Type: application/json
 
@@ -30,7 +30,7 @@ Content-Type: application/json
 ###
 
 ########################################
-# 4️⃣ Add Candidate: Charlie
+#  Add Candidate: Charlie
 POST http://localhost:5000/api/candidates
 Content-Type: application/json
 
@@ -42,14 +42,14 @@ Content-Type: application/json
 ###
 
 ########################################
-# 5️⃣ Get all candidates (should show 3 candidates now)
+#  Get all candidates (should show 3 candidates now)
 GET http://localhost:5000/api/candidates
 Content-Type: application/json
 
 ###
 
 ########################################
-# 6️⃣ Vote for Alice
+#  Vote for Alice
 # Replace <ALICE_ID> with the actual _id from the previous GET
 POST http://localhost:5000/api/vote
 Content-Type: application/json
@@ -62,7 +62,7 @@ Content-Type: application/json
 ###
 
 ########################################
-# 7️⃣ Try voting again with same voter (should fail)
+#  Try voting again with same voter (should fail)
 POST http://localhost:5000/api/vote
 Content-Type: application/json
 
@@ -74,6 +74,6 @@ Content-Type: application/json
 ###
 
 ########################################
-# 8️⃣ Get results (check votes)
+#  Get results (check votes)
 GET http://localhost:5000/api/results
 Content-Type: application/json
